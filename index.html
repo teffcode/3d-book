@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+    :root {
+      --white: #FFFFFF;
+      --purple-0: #FACCFF;
+      --purple-1: #DCB0FF;
+      --purple-2: #BE93FD;
+      --purple-3: #A178DF;
+      --purple-4: #845EC2;
+    }
+
+    * {
+      transform-style: preserve-3d;
+    }
+
+    body {
+      display: grid;
+      place-items: center;
+      height: 100vh;
+      overflow: hidden;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .container {
+      transform: rotateX(60deg)
+                 rotateZ(45deg);
+      width: 30vw;
+      height: 20vw;
+    }
+
+    .bottom {
+      width: 30vw;
+      height: 20vw;
+      background: var(--purple-1);
+    }
+
+    .top {
+      width: 30vw;
+      height: 20vw;
+      background: var(--purple-2);
+      transform: translateY(-20vw)
+                translateZ(3vw);
+      position: relative;
+    }
+
+    .title {
+      position: absolute;
+      width: 14vw;
+      height: 10vw;
+      background: var(--purple-4);
+      bottom: 4vw;
+      border: 2px solid var(--white);
+      transform: rotate(-90deg);
+      padding: 1vw;
+      display: grid;
+      place-items: center;
+      font-size: 2.5vw;
+      text-align: center;
+      color: var(--white);
+    }
+
+    .left {
+      width: 30vw;
+      height: 3vw;
+      background: var(--purple-3);
+      transform-origin: bottom left;
+      transform: rotateX(-90deg)
+                 translateZ(-23vw);
+    }
+
+    .front {
+      width: 20vw;
+      height: 3vw;
+      background: var(--purple-4);
+      transform-origin: bottom left;
+      transform: rotateX(-90deg)
+                 rotateY(90deg)
+                 translateZ(30vw)
+                 translateX(26vw);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="bottom"></div>
+    <div class="top">
+      <div class="title">CSS is Awesome</div>
+    </div>
+    <div class="left"></div>
+    <div class="front"></div>
+  </div>
+</body>
+</html>
